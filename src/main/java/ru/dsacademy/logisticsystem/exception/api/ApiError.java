@@ -12,7 +12,10 @@ public record ApiError(
         Instant timestamp) {
     /**
      * Статичный метод для создания Объекта ApiError.
-     * @return ApiError
+     * @param message Сообщение об ошибке, которое будет отображено в ответе.
+     * @param violations Список нарушений валидации, содержащий поля с ошибками и их описание.
+     * @param path Путь запроса (URI), который вызвал ошибку.
+     * @return Новый объект {@link ApiError} с текущим временем ошибки.
      */
     public static ApiError of(String message, List<FieldViolation> violations, String path) {
         return new ApiError(message, violations, path, Instant.now());

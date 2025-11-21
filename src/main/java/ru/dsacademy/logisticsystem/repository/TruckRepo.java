@@ -1,10 +1,10 @@
 package ru.dsacademy.logisticsystem.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.dsacademy.logisticsystem.entity.City;
+import ru.dsacademy.logisticsystem.entity.Truck;
 /**
- * JPA репозиторий для сущности {@link City}.
+ * JPA репозиторий для сущности {@link Truck}.
  */
 @Repository
-public interface CityRepo extends JpaRepository<City, Long> {
+public interface TruckRepo extends JpaRepository<Truck, Long> {
 }

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Repository;
 import ru.dsacademy.logisticsystem.entity.CityRoute;
 import ru.dsacademy.logisticsystem.entity.CityRouteId;
 /**
- * JPA репозиторий для CityRoute.
+ * JPA репозиторий для сущности {@link CityRoute}.
  */
 @Repository
 public interface CityRouteRepo extends JpaRepository<CityRoute, CityRouteId> {

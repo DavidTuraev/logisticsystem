@@ -4,7 +4,6 @@ import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
 import java.util.Objects;
 /**
@@ -23,7 +22,6 @@ public class CityRouteId implements Serializable {
     private Long fromCityId;
     @Column(name = "id_to_city")
     private Long toCityId;
-
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof CityRouteId that)) {
@@ -32,7 +30,6 @@ public class CityRouteId implements Serializable {
         return Objects.equals(fromCityId, that.fromCityId) && Objects
                 .equals(toCityId, that.toCityId);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(fromCityId, toCityId);

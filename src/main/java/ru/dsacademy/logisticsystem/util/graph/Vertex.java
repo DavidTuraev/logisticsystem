@@ -2,9 +2,9 @@ package ru.dsacademy.logisticsystem.util.graph;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Класс представления вершины для графа, который используется для вычислений алгоритма дейкстры.
  * Использует Comparable для использования в PriorityQueue в классе {@link Graph}.

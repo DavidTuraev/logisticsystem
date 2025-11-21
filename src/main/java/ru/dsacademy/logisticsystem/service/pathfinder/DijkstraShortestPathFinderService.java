@@ -14,7 +14,6 @@ public class DijkstraShortestPathFinderService implements ShortestPathFinderServ
     private final PriorityQueue<Vertex> queue = new PriorityQueue<>();
     /**
      * Выполняет алгоритм Дейкстры для указанной стартовой вершины.
-     *
      * @param start исходная вершина графа.
      */
     @Override
@@ -37,7 +36,6 @@ public class DijkstraShortestPathFinderService implements ShortestPathFinderServ
     /**
      * Метод, который возвращает оптимальный путь для определенной вершины.
      * Вызывается после того, как выполнился метод compute.
-     *
      * @param end Поле для которого нужно узнать путь от начала до вершины end.
      * @return возвращается список id городов в порядке прохождения маршрута от начала до конца.
      */

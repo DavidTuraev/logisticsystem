@@ -9,10 +9,9 @@ public class VertexNotFoundException extends RuntimeException {
     private final String valueTo;
     /**
      * Конструктор для создания исключения.
-     *
-     * @param message   Сообщение об ошибке
+     * @param message Сообщение об ошибке
      * @param valueFrom id вершина начала
-     * @param valueTo   id вершина конца
+     * @param valueTo id вершина конца
      */
     public VertexNotFoundException(String message, String valueFrom, String valueTo) {
         super(message);

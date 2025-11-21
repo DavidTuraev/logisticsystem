@@ -5,19 +5,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 /**
- * Сущность города в системе логистики.
- * Используется как элемент графа дорог
+ * Сущность, представляющая груз,
+ * которая используется алгоритмом для загрузки грузовика.
  */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "city", schema = "logistic_company")
+@Table(name = "cargo", schema = "logistic_company")
 @Entity
-public class City {
+public class Cargo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name", unique = true)
     private String name;
+    private Double weight;
+    private Double volume;
+    private Double price;
 }

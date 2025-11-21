@@ -1,5 +1,6 @@
 package ru.dsacademy.logisticsystem.util.graph;
 import ru.dsacademy.logisticsystem.exception.custom.VertexNotFoundException;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +12,6 @@ public class Graph implements GraphView {
     private final Map<Long, Vertex> vertexMap = new HashMap<>();
     /**
      * Метод для получения вершины по id из vertexMap(граф).
-     *
      * @param id - id города
      * @return Vertex - объект вершины, с которым работает алгоритм Дейкстры
      * или {@code null} если вершина отсутствует.
@@ -32,7 +32,6 @@ public class Graph implements GraphView {
     }
     /**
      * Метод для добавления вершины в vertexMap(граф).
-     *
      * @param id - id города.
      */
     void addVertex(Long id) {
@@ -40,9 +39,8 @@ public class Graph implements GraphView {
     }
     /**
      * Метод для добавления маршрутов(ребер) в vertexMap(граф)
-     *
      * @param fromId - id начальной вершины(города)
-     * @param toId   - id конечной вершины(города)
+     * @param toId - id конечной вершины(города)
      * @param weight - вес ребра (дистанция между городами)
      * @throws VertexNotFoundException исключение, если вершины не найдены в vertexMap.
      */

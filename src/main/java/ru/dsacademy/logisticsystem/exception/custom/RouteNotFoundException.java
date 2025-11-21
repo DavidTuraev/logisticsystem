@@ -12,10 +12,10 @@ public class RouteNotFoundException extends RuntimeException {
     /**
      * Конструктор для создания исключения.
      * @param message Сообщение исключения
-     * @param field1  поле которое не прошло проверку
-     * @param value1  значение для field1
-     * @param field2  поле которое не прошло проверку
-     * @param value2  значение для field2
+     * @param field1 поле которое не прошло проверку
+     * @param value1 значение для field1
+     * @param field2 поле которое не прошло проверку
+     * @param value2 значение для field2
      */
     public RouteNotFoundException(String message, String field1, String value1, String field2, String value2) {
         super(message);

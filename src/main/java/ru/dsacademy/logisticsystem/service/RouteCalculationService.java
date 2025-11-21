@@ -1,7 +1,7 @@
 package ru.dsacademy.logisticsystem.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.dsacademy.logisticsystem.dto.RouteResult;
+import ru.dsacademy.logisticsystem.dto.route.RouteResponseDto;
 import ru.dsacademy.logisticsystem.exception.custom.RouteNotFoundException;
 import ru.dsacademy.logisticsystem.service.pathfinder.DijkstraShortestPathFinderService;
 import ru.dsacademy.logisticsystem.service.pathfinder.ShortestPathFinderService;
@@ -19,18 +19,18 @@ public class RouteCalculationService {
     /**
      * Метод получает стартовую и конечную вершины из GraphHolderService,
      * запускает алгоритм Дейкстры от стартовой вершины и формирует объект.
-     *
      * @param idFrom id стартовой вершины (id города)
-     * @param idTo   id конечной вершины (id города)
+     * @param idTo id конечной вершины (id города)
      * @return DTO RouteResult объект с минимальной дистанцией и пути в виде списка
+     * @throws RouteNotFoundException если путь не найден
      */
-    public RouteResult calculationOptionalPath(Long idFrom, Long idTo) {
+    public RouteResponseDto calculationOptionalPath(Long idFrom, Long idTo) {
         Vertex start = graphHolderService.getGraph().get(idFrom);
         Vertex end = graphHolderService.getGraph().get(idTo);
         if (start == null || end == null) {
             throw new RouteNotFoundException("Маршрут не найден", "startId", idFrom.toString(), "endId", idTo.toString());
         }
         pathFinderService.compute(start);
-        return new RouteResult(end.getDistance(), pathFinderService.getPath(end));
+        return new RouteResponseDto(end.getDistance(), pathFinderService.getPath(end));
     }
 }

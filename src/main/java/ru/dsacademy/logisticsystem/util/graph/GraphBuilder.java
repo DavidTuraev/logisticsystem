@@ -5,6 +5,7 @@ import ru.dsacademy.logisticsystem.entity.City;
 import ru.dsacademy.logisticsystem.entity.CityRoute;
 import ru.dsacademy.logisticsystem.repository.CityRepo;
 import ru.dsacademy.logisticsystem.repository.CityRouteRepo;
+
 import java.util.List;
 /**
  * Сервис предоставляет создание графа и его заполнение.
@@ -16,7 +17,6 @@ public class GraphBuilder {
     private final CityRouteRepo cityRouteRepo;
     /**
      * Метод для заполнения графа вершинами и ребрами из базы данных.
-     *
      * @return GraphView объект обертка для предоставления необходимых методов взаимодействия с графом.
      */
     public GraphView buildGraph() {
