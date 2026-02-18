@@ -1,4 +1,4 @@
-FROM eclipse-temurin:25-jdk AS build
+FROM bellsoft/liberica-openjdk-alpine:25 as build
 WORKDIR /app
 
 COPY gradlew gradlew
@@ -8,7 +8,7 @@ COPY src src
 
 RUN chmod +x gradlew && ./gradlew --no-daemon clean bootJar
 
-FROM eclipse-temurin:25-jre
+FROM bellsoft/liberica-openjdk-alpine:25
 WORKDIR /app
 
 COPY --from=build /app/build/libs/*.jar app.jar
