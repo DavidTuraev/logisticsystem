@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0001-05-create-city-routes-table
+      author: codex
+      changes:
+        - createTable:
+            schemaName: logistic_company
+            tableName: city_routes
+            columns:
+              - column:
+                  name: id_from_city
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: id_to_city
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: distance
+                  type: BIGINT
+        - addPrimaryKey:
+            schemaName: logistic_company
+            tableName: city_routes
+            columnNames: id_from_city, id_to_city
+            constraintName: pk_city_routes
+        - addForeignKeyConstraint:
+            baseTableSchemaName: logistic_company
+            baseTableName: city_routes
+            baseColumnNames: id_from_city
+            referencedTableSchemaName: logistic_company
+            referencedTableName: city
+            referencedColumnNames: id
+            constraintName: fk_city_routes_from_city
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+        - addForeignKeyConstraint:
+            baseTableSchemaName: logistic_company
+            baseTableName: city_routes
+            baseColumnNames: id_to_city
+            referencedTableSchemaName: logistic_company
+            referencedTableName: city
+            referencedColumnNames: id
+            constraintName: fk_city_routes_to_city
+            onDelete: RESTRICT
+            onUpdate: CASCADE

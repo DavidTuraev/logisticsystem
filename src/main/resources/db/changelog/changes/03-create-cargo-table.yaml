@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0001-03-create-cargo-table
+      author: codex
+      changes:
+        - createTable:
+            schemaName: logistic_company
+            tableName: cargo
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_cargo
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: weight
+                  type: DOUBLE PRECISION
+              - column:
+                  name: volume
+                  type: DOUBLE PRECISION
+              - column:
+                  name: price
+                  type: DOUBLE PRECISION

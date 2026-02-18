@@ -1,0 +1,135 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0001-06-seed-city-data
+      author: codex
+      changes:
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 15
+              - column:
+                  name: name
+                  value: Саратов
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 16
+              - column:
+                  name: name
+                  value: Самара
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 17
+              - column:
+                  name: name
+                  value: Сызрань
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 18
+              - column:
+                  name: name
+                  value: Ульяновск
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 19
+              - column:
+                  name: name
+                  value: Казань
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 20
+              - column:
+                  name: name
+                  value: Нижний новгород
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 21
+              - column:
+                  name: name
+                  value: Владимир
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 22
+              - column:
+                  name: name
+                  value: Москва
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 23
+              - column:
+                  name: name
+                  value: Воронеж
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 24
+              - column:
+                  name: name
+                  value: Тамбов
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 25
+              - column:
+                  name: name
+                  value: Рязань
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 26
+              - column:
+                  name: name
+                  value: Пенза
+        - insert:
+            schemaName: logistic_company
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 27
+              - column:
+                  name: name
+                  value: Саранск

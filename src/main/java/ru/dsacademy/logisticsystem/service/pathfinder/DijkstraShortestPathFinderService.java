@@ -22,21 +22,21 @@ public class DijkstraShortestPathFinderService implements ShortestPathFinderServ
      * @param start исходная вершина графа.
      */
     @Override
-    public void compute(Vertex start) {
-        start.setDistance(0L);
-        queue.add(start);
-        while (!queue.isEmpty()) {
-            Vertex curr = queue.poll();
-            for (Edge edgeNeighbour : curr.getNeighbors()) {
-                Vertex vertexNeighbour = edgeNeighbour.getTo();
-                long updateDistance = curr.getDistance() + edgeNeighbour.getWeight();
-                if (updateDistance < vertexNeighbour.getDistance()) {
-                    vertexNeighbour.setDistance(updateDistance);
-                    vertexNeighbour.setPrevious(curr);
-                    queue.add(vertexNeighbour);
+        public void compute(Vertex start) {
+            start.setDistance(0L);
+            queue.add(start);
+            while (!queue.isEmpty()) {
+                Vertex curr = queue.poll();
+                for (Edge edgeNeighbour : curr.getNeighbors()) {
+                    Vertex vertexNeighbour = edgeNeighbour.getTo();
+                    long updateDistance = curr.getDistance() + edgeNeighbour.getWeight();
+                    if (updateDistance < vertexNeighbour.getDistance()) {
+                        vertexNeighbour.setDistance(updateDistance);
+                        vertexNeighbour.setPrevious(curr);
+                        queue.add(vertexNeighbour);
+                    }
                 }
             }
-        }
     }
     /**
      * Метод, который возвращает оптимальный путь для определенной вершины.
@@ -48,7 +48,7 @@ public class DijkstraShortestPathFinderService implements ShortestPathFinderServ
     public List<String> getPath(Vertex end) {
         List<String> result = new ArrayList<>();
         Vertex curr = end;
-        City city = new City();
+        City city;
         while (curr != null) {
             city =  cityRepo.findById(curr.getId()).get();
             result.add(city.getName());
