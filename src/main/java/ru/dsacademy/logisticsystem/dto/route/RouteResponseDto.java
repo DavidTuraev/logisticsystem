@@ -7,6 +7,6 @@ import java.util.List;
  */
 public record RouteResponseDto(
         Long distance,
-        List<Long> path
+        List<String> path
 ) {
 }

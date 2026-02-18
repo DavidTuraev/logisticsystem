@@ -16,5 +16,5 @@ public interface ShortestPathFinderService {
      * @param end конечная вершина до которой нужно получить кратчайший путь
      * @return список идентификаторов вершин, предоставляющий кратчайший путь до конечной вершины
      */
-    List<Long> getPath(Vertex end);
+    List<String> getPath(Vertex end);
 }
